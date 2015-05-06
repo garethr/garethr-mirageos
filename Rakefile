@@ -33,7 +33,9 @@ exclude_paths = [
 ]
 PuppetLint.configuration.ignore_paths = exclude_paths
 
-PuppetSyntax.future_parser = true
+if ENV['FUTURE_PARSER'] == 'yes'
+  PuppetSyntax.future_parser = true
+end
 PuppetSyntax.exclude_paths = exclude_paths
 
 desc "Run acceptance tests"
