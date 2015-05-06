@@ -37,7 +37,7 @@ can be run with:
 
 ```
 bundle install
-bundle exec rake test
+FUTURE_PARSER=yes bundle exec rake test
 ```
 
 This checks the metadata, the syntax of the puppet manifests and runs
