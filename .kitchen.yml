@@ -1,0 +1,29 @@
+---
+driver:
+  name: vagrant
+  synced_folders:
+    - ["fixtures/mirage-web", "/opt/mirage-web", "create: true"]
+
+provisioner:
+  name: puppet_apply
+  puppet_apply_command: sudo -E puppet apply /tmp/kitchen/manifests/init.pp --modulepath=/tmp/kitchen/modules --manifestdir=/tmp/kitchen/manifests --parser=future
+  manifests_path: fixtures
+  modules_path: modules
+
+platforms:
+  - name: ubuntu-14.04
+    driver_plugin: vagrant
+    driver_config:
+      box: puppetlabs/ubuntu-14.04-64-nocm
+      box_url: https://atlas.hashicorp.com/puppetlabs/boxes/ubuntu-14.04-64-nocm
+  - name: ubuntu-12.04
+    driver_plugin: vagrant
+    driver_config:
+      box: puppetlabs/ubuntu-12.04-64-nocm
+      box_url: https://atlas.hashicorp.com/puppetlabs/boxes/ubuntu-12.04-64-nocm
+
+
+suites:
+  - name: default
+    provisioner:
+      manifest: init.pp

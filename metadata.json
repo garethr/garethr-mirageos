@@ -1,0 +1,37 @@
+{
+  "name": "garethr-mirageos",
+  "version": "0.1.0",
+  "author": "Gareth Rushgrove",
+  "summary": "Install OCaml and Opam packages required for MirageOS",
+  "license": "Apache-2.0",
+  "source": "https://github.com/garethr/garethr-mirageos.git",
+  "project_page": "https://github.com/garethr/garethr-mirageos",
+  "issues_url": "https://github.com/garethr/garethr-mirageos/issues",
+  "requirements": [
+    {
+      "name": "pe",
+      "version_requirement": "3.7"
+    },{
+      "name": "puppet",
+      "version_requirement": ">= 3.7.0"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 4.0.0"
+    },{
+      "name": "puppetlabs/apt",
+      "version_requirement": ">= 1.1.0 <= 1.8.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "14.04",
+        "12.04"
+      ]
+    }
+  ]
+}
