@@ -1,5 +1,5 @@
 [![Puppet
-Forge](http://img.shields.io/puppetforge/v/garethr/mirageos.svg)](https://forge.puppetlabs.com/garethr/miraageos)
+Forge](http://img.shields.io/puppetforge/v/garethr/mirageos.svg)](https://forge.puppetlabs.com/garethr/mirageos)
 [![Build
 Status](https://secure.travis-ci.org/garethr/garethr-mirageos.png)](http://travis-ci.org/garethr/garethr-mirageos)
 [![Puppet Forge
